@@ -26,6 +26,12 @@ filetype plugin indent on
 let g:Powerline_symbols = 'fancy'
 set laststatus=2 
 
+"Tab and spaces
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
 set t_Co=256
 noremap <silent> <c-s> :update<cr>
 vnoremap <silent> <c-s> <c-c>:update<cr>
