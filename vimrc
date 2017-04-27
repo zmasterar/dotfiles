@@ -20,6 +20,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Bundle 'altercation/vim-colors-solarized'
 " Rails
 Plugin 'tpope/vim-rails'
+" Fugitive
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
