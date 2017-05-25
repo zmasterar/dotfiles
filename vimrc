@@ -12,12 +12,16 @@ Plugin 'VundleVim/Vundle.vim'
 Bundle 'scrooloose/nerdtree'
 " File fuzzy search
 Bundle 'ctrlpvim/ctrlp.vim'
-" Powerline
-Bundle 'Lokaltog/vim-powerline'
+" Airline/Powerline
+Bundle 'vim-airline/vim-airline'
+" Airline themes
+Plugin 'vim-airline/vim-airline-themes'
 " Vim theme solarized
 Bundle 'altercation/vim-colors-solarized'
 " Rails
 Plugin 'tpope/vim-rails'
+" Fugitive
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -42,3 +46,6 @@ command WQ wq
 command Wq wq
 " Ctrl+n for Nerdtree
 map <C-n> :NERDTreeToggle<CR>
+" Powerline fonts for airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme='simple'
