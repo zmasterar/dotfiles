@@ -90,3 +90,11 @@ alias cd..="cd .."
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.rvm/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/zmaster/google-cloud-sdk/path.zsh.inc' ]; then . '/home/zmaster/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/zmaster/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/zmaster/google-cloud-sdk/completion.zsh.inc'; fi
+
+cd /mnt/d/projects
