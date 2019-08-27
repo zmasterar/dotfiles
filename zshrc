@@ -54,7 +54,7 @@ DEFAULT_USER=""
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git rails ruby heroku gem rvm tmux zsh-syntax-highlighting zsh-autosuggestions)
-
+ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -96,6 +96,8 @@ if [ -f '/home/zmaster/google-cloud-sdk/path.zsh.inc' ]; then . '/home/zmaster/g
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/zmaster/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/zmaster/google-cloud-sdk/completion.zsh.inc'; fi
+
+source /home/zmaster/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.rvm/bin:$PATH"
