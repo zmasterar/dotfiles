@@ -90,6 +90,7 @@ alias projects="cd /mnt/d/projects/ruby"
 alias dotfiles="cd /home/zmaster/dotfiles"
 alias subl="/mnt/d/Google\ Drive/Programs/dev/Sublime\ Text/subl.exe"
 alias atom="cmd.exe /c atom ."
+alias explorer="explorer.exe ."
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/zmaster/google-cloud-sdk/path.zsh.inc' ]; then . '/home/zmaster/google-cloud-sdk/path.zsh.inc'; fi
