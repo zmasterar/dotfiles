@@ -53,7 +53,7 @@ DEFAULT_USER=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails ruby heroku gem rvm tmux zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git rails ruby heroku gem rvm tmux zsh-syntax-highlighting zsh-autosuggestions sudo)
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
@@ -97,6 +97,11 @@ alias dotfiles="cd /home/zmaster/dotfiles"
 alias subl="/mnt/d/Google\ Drive/Programs/dev/Sublime\ Text/subl.exe"
 alias atom="cmd.exe /c atom ."
 alias explorer="explorer.exe ."
+alias la='colorls -lA --sd'
+alias ls='colorls --sd'
+
+LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=36:*.rpm=90'
+export LS_COLORS
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/zmaster/google-cloud-sdk/path.zsh.inc' ]; then . '/home/zmaster/google-cloud-sdk/path.zsh.inc'; fi
