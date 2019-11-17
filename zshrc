@@ -97,8 +97,8 @@ alias dotfiles="cd /home/zmaster/dotfiles"
 alias subl="/mnt/d/Google\ Drive/Programs/dev/Sublime\ Text/subl.exe"
 alias atom="cmd.exe /c atom ."
 alias explorer="explorer.exe ."
-alias la='colorls -lA --sd'
-alias ls='colorls --sd'
+alias la='colorls -lA --sd --gs'
+alias ls='colorls --sd --gs'
 
 LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=36:*.rpm=90'
 export LS_COLORS
