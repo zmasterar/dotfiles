@@ -57,6 +57,12 @@ plugins=(git rails ruby heroku gem rvm tmux zsh-syntax-highlighting zsh-autosugg
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment 26 white "%(!.%{%F{yellow}%}.)%n@%m"
+  fi
+}
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
