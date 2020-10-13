@@ -2,6 +2,9 @@
 set nocompatible  " be iMproved
 filetype off
 
+" Show line numbers
+set number
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
