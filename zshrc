@@ -92,7 +92,7 @@ prompt_context() {
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cd..="cd .."
-alias projects="cd /mnt/d/projects"
+alias projects="cd /mnt/d/Google\ Drive/projects"
 alias dotfiles="cd /home/zmaster/dotfiles"
 alias subl="/mnt/d/Google\ Drive/Programs/dev/Sublime\ Text/subl.exe"
 alias atom="cmd.exe /c atom ."
