@@ -76,6 +76,7 @@ prompt_context() {
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='code --wait'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
