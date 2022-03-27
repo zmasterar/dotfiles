@@ -100,7 +100,7 @@ alias atom="cmd.exe /c atom ."
 alias explorer="explorer.exe ."
 alias la='colorls -lA --sd --gs'
 alias ls='colorls --sd --gs'
-alias cloud='gcloud beta compute ssh --zone "us-east1-b" "rails" --project "ethereal-app-240723"'
+alias cloud='gcloud compute ssh --zone "us-east1-b" "rails"  --project "ethereal-app-240723"'
 
 LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=36:*.rpm=90'
 export LS_COLORS
