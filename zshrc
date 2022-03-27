@@ -84,24 +84,6 @@ export EDITOR='code --wait'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cd..="cd .."
-alias projects="cd /mnt/d/Google\ Drive/projects"
-alias dotfiles="cd /home/zmaster/dotfiles"
-alias subl="/mnt/d/Google\ Drive/Programs/dev/Sublime\ Text/subl.exe"
-alias atom="cmd.exe /c atom ."
-alias explorer="explorer.exe ."
-alias la='colorls -lA --sd --gs'
-alias ls='colorls --sd --gs'
-alias cloud='gcloud compute ssh --zone "us-east1-b" "rails"  --project "ethereal-app-240723"'
-
 LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=36:*.rpm=90'
 export LS_COLORS
 
