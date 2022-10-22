@@ -1,0 +1,5 @@
+alias be='bundle exec'
+alias ber='bundle exec rails'
+alias bers='bundle exec rails s -b 0.0.0.0'
+alias berc='bundle exec rails c'
+alias bert='bundle exec rails test'

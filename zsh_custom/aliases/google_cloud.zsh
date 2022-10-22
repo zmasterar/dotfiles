@@ -1,0 +1,1 @@
+alias cloud='gcloud compute ssh --zone "us-east1-b" "rails"  --project "ethereal-app-240723"'

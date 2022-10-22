@@ -1,0 +1,5 @@
+alias wg-start='sudo systemctl start wg-quick@wg0.service'
+alias wg-stop='sudo systemctl stop wg-quick@wg0.service'
+alias wg-enable='sudo systemctl enable wg-quick@wg0.service'
+alias wg-disable='sudo systemctl disable wg-quick@wg0.service'
+alias wg-status='sudo systemctl status wg-quick@wg0.service'
