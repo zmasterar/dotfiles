@@ -102,10 +102,22 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.rbenv/shims:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.local/bin:$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
 # Add some culture when opening a new terminal
 fortune | xargs -0 cowsay | lolcat -a -s 50 -d 1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="$(brew --prefix openssl@1.1)/bin:$PATH"
+export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib"
+export CPPFLAGS="-I$(brew --prefix openssl@1.1)/include"
+export PKG_CONFIG_PATH="$(brew --prefix openssl@1.1)/lib/pkgconfig"
+export PATH="$(brew --prefix openssl@1.1)/bin:$PATH"
+export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib"
+export CPPFLAGS="-I$(brew --prefix openssl@1.1)/include"
+export PKG_CONFIG_PATH="$(brew --prefix openssl@1.1)/lib/pkgconfig"
+export PATH="$(brew --prefix openssl@1.1)/bin:$PATH"
+export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib"
+export CPPFLAGS="-I$(brew --prefix openssl@1.1)/include"
+export PKG_CONFIG_PATH="$(brew --prefix openssl@1.1)/lib/pkgconfig"
