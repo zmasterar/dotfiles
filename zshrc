@@ -106,4 +106,4 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 eval "$(rbenv init -)"
 
 # Add some culture when opening a new terminal
-fortune | xargs -0 cowsay | lolcat -a -s 50 -d 6
+fortune | xargs -0 cowsay | lolcat -a -s 50 -d 1
