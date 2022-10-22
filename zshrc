@@ -107,3 +107,5 @@ eval "$(rbenv init -)"
 
 # Add some culture when opening a new terminal
 fortune | xargs -0 cowsay | lolcat -a -s 50 -d 1
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
