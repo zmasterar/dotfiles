@@ -107,6 +107,9 @@ eval "$(rbenv init -)"
 # Add some culture when opening a new terminal
 fortune | xargs -0 cowsay | lolcat -a -s 50 -d 1
 
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="$(brew --prefix openssl@1.1)/bin:$PATH"
 export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib"
