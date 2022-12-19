@@ -4,6 +4,7 @@ filetype off
 
 " Show line numbers
 set number
+set relativenumber
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -39,6 +40,10 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
+" Center when scrolling
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
 set t_Co=256
 noremap <silent> <c-s> :update<cr>
 vnoremap <silent> <c-s> <c-c>:update<cr>
@@ -48,7 +53,7 @@ command W w
 command WQ wq
 command Wq wq
 " Ctrl+n for Nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>
 " Powerline fonts for airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='simple'
