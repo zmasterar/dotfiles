@@ -64,11 +64,12 @@ plugins=(docker git rails ruby heroku gem rvm tmux zsh-syntax-highlighting zsh-a
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
-prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment 26 white "%(!.%{%F{yellow}%}.)%n@%m"
-  fi
-}
+# This is for agnoster theme
+# prompt_context() {
+#   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+#     prompt_segment 26 white "%(!.%{%F{yellow}%}.)%n@%m"
+#   fi
+# }
 
 # User configuration
 
@@ -112,7 +113,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 eval "$(rbenv init -)"
 
 # Add some culture when opening a new terminal
-fortune | xargs -0 cowsay | lolcat -a -s 50 -d 1
+# fortune | xargs -0 cowsay | lolcat -a -s 50 -d 1
 
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
