@@ -21,7 +21,7 @@ def setvpn() {
   wireguard_conf_backup=$wireguard_path/wg0.conf.bak
 
 
-  if [[ ! -f "$profile_path" ]]; then
+  if ! sudo test -f "$profile_path" ; then
     echo "Profile file $profile_path does not exist."
     return
   fi
