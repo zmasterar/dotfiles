@@ -26,10 +26,10 @@ def setvpn() {
     return
   fi
 
-  if [ -L $wireguard_conf ] ; then
+  if sudo test -L $wireguard_conf ; then
     echo "Wireguard has a symbolic link for config. Replacing old config with a symbolic link for $profile."
     sudo rm $wireguard_conf
-  elif [ -e $wireguard_conf ] ; then
+  elif sudo test -f $wireguard_conf ; then
     echo "Wireguard config is not a symbolic link. A backup of the original file will be saved in $wireguard_conf_backup."
     sudo mv $wireguard_conf $wireguard_conf_backup
   else
