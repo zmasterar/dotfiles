@@ -1,6 +1,7 @@
 alias pjt='cd ~/pjt'
 
 alias jsl='code ~/pjt/devops/jenkins-shared-libraries'
+alias k8s-manifests='code ~/pjt/devops/k8s-manifests'
 
 alias agenda='cd ~/pjt/agenda'
 alias boletin-judicial='cd ~/pjt/boletin-judicial'
@@ -13,6 +14,7 @@ alias infraestructura='cd ~/pjt/infraestructura'
 alias inicio-expedientes='cd ~/pjt/inicio-expedientes'
 alias justicia-de-paz='cd ~/pjt/justicia-de-paz'
 alias oga='cd ~/pjt/oga'
+alias padron-electoral='cd ~/pjt/padron-electoral'
 alias portal-del-sae-v2='cd ~/pjt/portal-del-sae-v2'
 alias portal-del-sae='cd ~/pjt/portal-del-sae'
 alias rrhh='cd ~/pjt/rrhh'
