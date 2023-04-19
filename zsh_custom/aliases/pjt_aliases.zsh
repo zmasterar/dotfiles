@@ -19,3 +19,5 @@ alias portal-del-sae-v2='cd ~/pjt/portal-del-sae-v2'
 alias portal-del-sae='cd ~/pjt/portal-del-sae'
 alias rrhh='cd ~/pjt/rrhh'
 alias sistemas-no-jurisdiccionales='cd ~/pjt/sistemas-no-jurisdiccionales'
+# e.g. rm -f $HOME/pjt/kubeconfig && ln -s $HOME/pjt/kubeconfig-ws15desa $HOME/pjt/kubeconfig
+export KUBECONFIG=$HOME/pjt/kubeconfig
