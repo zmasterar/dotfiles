@@ -13,3 +13,9 @@ done
 for file in $(find ./base_dot_files -type f -printf "%f\n"); do 
   ln -f -s $HOME/dotfiles/base_dot_files/$file $HOME/.$file
 done
+
+# Install colorls gem and color theme
+if ! gem list colorls -i --silent; then
+  gem install colorls
+fi
+ln -f -s $HOME/dotfiles/other_scripts/dark_colors.yaml $HOME/.config/colorls
