@@ -1,5 +1,5 @@
-# ln -s ~/dotfiles/zsh_custom/aliases/aliases.zsh $ZSH_CUSTOM/aliases.zsh
-search_dir=~/dotfiles/zsh_custom/aliases
+# ln -s ~/dotfiles/aliases/aliases.zsh $ZSH_CUSTOM/aliases.zsh
+search_dir=~/dotfiles/aliases
 for file in "$search_dir"/* 
 do 
   filename=$(basename -- "$file")
