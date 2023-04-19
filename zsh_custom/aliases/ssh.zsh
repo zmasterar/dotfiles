@@ -1,2 +1,5 @@
-alias sshkey="cat ~/.ssh/id_rsa.pub"
 alias sshconfig="vim ~/.ssh/config"
+
+def sshkey() {
+  echo 'echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6PQjgBvF2avmNc/4dbEBcLa2i0jWde4aPGnF/s353jJcrWg3iPwYmPIm70lHXVi/rTA5NdSjkfaI9BUsNm91J7wbWt2/RBPgMOTamts0pxhYz1OSqRUL9bs04PhXgu56N5TBSODNog5m67311dIcwNTMkmg30kPXmvWrsTpxM7cb577bg/+HcsLxe8hkbFvzaPY8QbgfBz1p13mDpGM8aP2w2HBgwmDkFG3dcCnXNSB8UdDIAxOlq4qfGmJ8Fv/f+h5KVy4JwRHyLIOkwQjujMpayRGXugu5qdr5TsBr/7XNJ3DiPf2Ga1aJjeZ/dKw45E/bO0Bo7IA5gFeLQoTUV0xysFTfrO7vmgKhL2Q8CMRjOyX/swEYtAj9Z8ZELqSm7BoRjzIabj32vJC7Ddpz1UNbWV6eHufn0qFYkgI0mbVTLOiU/Gf7Hwcy5mKNJyACbrtavp91w0OWLrcfvkQG2+ldSIaStK0b/8g34BnGLMpOGLj/ZwQDaho4SWUyejvs= benjamin@benjamin-OptiPlex-3090" >> ~/.ssh/authorized_keys'
+}
