@@ -1,0 +1,1 @@
+alias gla="$HOME/pjt/git_pull_all.sh"
