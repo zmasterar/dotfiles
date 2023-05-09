@@ -1,4 +1,6 @@
 drl () {
+  set -x
+
   port=""; environment=""; port_argument=""; env_filename=".env.develop"; container_name=${PWD##*/}
 
   while getopts p:e: flag; do
@@ -17,6 +19,5 @@ drl () {
   fi
 
   command="docker build --no-cache -t $container_name -f docker/Dockerfile --build-arg \"ENV_FILENAME=$env_filename\" . && docker run $port_argument --rm --name $container_name $container_name && docker rmi $container_name"
-  echo "Command: $command\n"
   eval $command
 }
