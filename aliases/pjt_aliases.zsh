@@ -4,6 +4,7 @@ alias jsl='code ~/pjt/devops/jenkins-shared-libraries'
 alias k8s-manifests='code ~/pjt/devops/k8s-manifests'
 
 alias agenda='cd ~/pjt/agenda'
+alias airflow='cd ~/pjt/infraestructura/airflow'
 alias boletin-judicial='cd ~/pjt/boletin-judicial'
 alias commons='cd ~/pjt/commons'
 alias consulta-acordadas='cd ~/pjt/consulta-acordadas'
