@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # crontab
-# @reboot $HOME/git_pull_all.sh
-# 5 7 * * 1-5 $HOME/git_pull_all.sh
+# @reboot XDG_RUNTIME_DIR=/run/user/$(id -u) $HOME/git_pull_all.sh
+# 5 7 * * 1-5 XDG_RUNTIME_DIR=/run/user/$(id -u) $HOME/git_pull_all.sh
 
 export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/deploy"
 path="$HOME"
