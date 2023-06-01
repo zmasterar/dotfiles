@@ -35,7 +35,7 @@ rbenv global $(rbenv install -l | grep -v - | tail -1)
 
 # Install colorls gem and color theme
 if ! gem list colorls -i --silent; then
-  gem install colorls
+  gem install colorls -N
 fi
 
 mkdir $HOME/.config

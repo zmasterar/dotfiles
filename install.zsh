@@ -16,6 +16,6 @@ done
 
 # Install colorls gem and color theme
 if ! gem list colorls -i --silent; then
-  gem install colorls
+  gem install colorls -N
 fi
 ln -f -s $HOME/dotfiles/other_scripts/dark_colors.yaml $HOME/.config/colorls
