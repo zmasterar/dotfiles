@@ -3,6 +3,10 @@ set -x
 # Ensure sudo
 sudo true
 
+mkdir -p $HOME/.ssh
+chmod  0700 $HOME/.ssh
+# For reference, private keys must have 0600 permissions
+
 sudo apt update && sudo apt install -y zsh
 sudo chsh -s $(which zsh) $(whoami)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
