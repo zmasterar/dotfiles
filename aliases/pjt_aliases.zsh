@@ -12,6 +12,7 @@ alias devops='cd ~/pjt/devops'
 alias estadisticas='cd ~/pjt/estadisticas'
 alias expediente-virtual='cd ~/pjt/expediente-virtual'
 alias flipbook='cd ~/pjt/flipbook'
+alias illuvatar='cd ~/pjt/illuvatar'
 alias infraestructura='cd ~/pjt/infraestructura'
 alias inicio-expedientes='cd ~/pjt/inicio-expedientes'
 alias justicia-de-paz='cd ~/pjt/justicia-de-paz'
@@ -23,3 +24,4 @@ alias rrhh='cd ~/pjt/rrhh'
 alias sistemas-no-jurisdiccionales='cd ~/pjt/sistemas-no-jurisdiccionales'
 # e.g. rm -f $HOME/pjt/kubeconfig && ln -s $HOME/pjt/kubeconfig-ws15desa $HOME/pjt/kubeconfig
 export KUBECONFIG=$HOME/pjt/kubeconfig
+alias wakelazarus='ssh raspi400 wakelazarus'
