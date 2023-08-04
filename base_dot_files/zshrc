@@ -60,7 +60,7 @@ DEFAULT_USER=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker git rails ruby heroku gem rvm tmux zsh-syntax-highlighting zsh-autosuggestions sudo autoupdate)
+plugins=(docker git git-flow-completion rails ruby heroku gem rvm tmux zsh-syntax-highlighting zsh-autosuggestions sudo autoupdate)
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
