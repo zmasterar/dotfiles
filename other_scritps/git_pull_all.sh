@@ -12,7 +12,7 @@ handle_dismiss () {
 }
 
 open_log () {
-  code $HOME/git_pull_all.log &
+  /usr/bin/code $HOME/git_pull_all.log &
 }
 
 echo $(date "+%Y-%m-%d %H:%M:%S") > $HOME/git_pull_all.log 2>&1
