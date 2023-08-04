@@ -18,6 +18,8 @@ drl () {
     env_filename=".env.$environment"
   fi
 
-  command="docker build --no-cache -t $container_name -f docker/Dockerfile --build-arg \"ENV_FILENAME=$env_filename\" . && docker run $port_argument --rm --name $container_name $container_name && docker rmi $container_name"
+  ssl_volume_argment="-v /home/blavena/ssl:/etc/nginx/ssl"
+
+  command="docker build --no-cache -t $container_name -f docker/Dockerfile --build-arg \"ENV_FILENAME=$env_filename\" . && docker run $port_argument $ssl_volume_argment --network=databases_net --rm --name $container_name $container_name && docker rmi $container_name"
   eval $command
 }
