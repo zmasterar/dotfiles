@@ -4,6 +4,7 @@ alias jsl='code ~/pjt/devops/jenkins-shared-libraries'
 alias k8s-manifests='code ~/pjt/devops/k8s-manifests'
 
 alias agenda='cd ~/pjt/agenda'
+alias audiencias-civiles='cd ~/pjt/audiencias-civiles'
 alias airflow='cd ~/pjt/infraestructura/airflow'
 alias boletin-judicial='cd ~/pjt/boletin-judicial'
 alias commons='cd ~/pjt/commons'
@@ -22,6 +23,7 @@ alias portal-del-sae-v2='cd ~/pjt/portal-del-sae-v2'
 alias portal-del-sae='cd ~/pjt/portal-del-sae'
 alias rrhh='cd ~/pjt/rrhh'
 alias sistemas-no-jurisdiccionales='cd ~/pjt/sistemas-no-jurisdiccionales'
+alias vosk-server='cd ~/pjt/vosk-server'
 # e.g. rm -f $HOME/pjt/kubeconfig && ln -s $HOME/pjt/kubeconfig-ws15desa $HOME/pjt/kubeconfig
 export KUBECONFIG=$HOME/pjt/kubeconfig
 alias wakelazarus='ssh raspi400 wakelazarus'
