@@ -1,0 +1,1 @@
+alias kdash='docker run --rm -it -v ~/pjt/kubeconfig:/root/.kube/config deepu105/kdash'
