@@ -1,0 +1,1 @@
+alias sqlcmd='docker exec -it mssql /opt/mssql-tools/bin/sqlcmd'
