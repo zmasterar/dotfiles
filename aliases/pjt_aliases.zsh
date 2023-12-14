@@ -29,3 +29,38 @@ alias vosk-server='cd ~/pjt/vosk-server'
 # e.g. rm -f $HOME/pjt/kubeconfig && ln -s $HOME/pjt/kubeconfig-ws15desa $HOME/pjt/kubeconfig
 export KUBECONFIG=$HOME/pjt/kubeconfig
 alias wakelazarus='ssh raspi400 wakelazarus'
+
+hints () {
+  usage () {
+    echo "Usage:"
+    echo "hints | hints a | hints all # Shows all hints"
+    echo "hints -h | --help"
+    echo "hints fix_ownership"
+    echo "hints create_database"
+  }
+
+  create_database () {
+    echo '### Create database'
+    echo "CREATE ROLE example WITH LOGIN
+VALID UNTIL 'infinity'
+NOINHERIT NOCREATEDB NOCREATEROLE NOREPLICATION NOSUPERUSER;
+CREATE DATABASE example WITH OWNER example;"
+    echo
+  }
+
+  fix_ownership () {
+    echo '### Change ownerwhip of tables and sequences'
+    echo 'export PGPASSWORD=postgres;export PGUSER=postgres;export PGHOST=localhost;export DBNAME=personal;for tbl in $(psql -qAt -c "select tablename from pg_tables where schemaname = '\''public'\'';" $DBNAME); do psql -c "alter table \"$tbl\" owner to $DBNAME" $DBNAME; done; for seq in $(psql -qAt -c "SELECT sequencename FROM pg_sequences where schemaname = '\''public'\'';" $DBNAME); do psql -c "ALTER SEQUENCE \"$seq\" OWNER TO $DBNAME" $DBNAME; done'
+    echo
+  }
+
+  case "$1" in
+    a | all ) true;;
+    create_database | create_db ) create_database; return;;
+    fix_ownership ) fix_ownership; return;;
+    -h | --help ) usage; return;;
+  esac
+  
+  fix_ownership
+  create_database
+}
