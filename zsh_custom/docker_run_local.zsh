@@ -15,7 +15,7 @@ drl () {
   fi
 
   if [ "$environment" != "" ]; then
-    env_filename=".env.$environment"
+    env_filename="$environment"
   fi
 
   ssl_volume_argment="-v /home/blavena/ssl:/etc/nginx/ssl"
