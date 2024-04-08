@@ -10,6 +10,9 @@ chmod  0700 $HOME/.ssh
 sudo add-apt-repository -y ppa:mattrose/terminator
 sudo apt update && sudo apt install -y zsh git curl tmux wireguard jq vim terminator
 
+#Ruby, Node and Python build dependencies
+sudo apt install -y autoconf build-essential libbz2-dev libdb-dev libffi-dev libgdbm-dev libgdbm6 libgmp-dev liblzma-dev libncurses5-dev libncursesw5-dev libreadline-dev libreadline6-dev libsqlite3-dev libssl-dev libxml2-dev libxmlsec1-dev libyaml-dev patch rustc tk-dev uuid-dev xz-utils zlib1g-dev dirmngr gpg gawk libpq-dev
+
 sudo chsh -s $(which zsh) $(whoami)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -27,13 +30,33 @@ for file in $(find ./zsh_custom -maxdepth 1 -type f -printf "%f\n"); do
   ln -f -s $HOME/dotfiles/zsh_custom/$file $ZSH_CUSTOM/$file
 done
 
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-eval "$($HOME/.rbenv/bin/rbenv init - zsh)"
-git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
-sudo apt install -y autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
-# Install latest Stable Ruby
-rbenv install $(rbenv install -l | grep -v - | tail -1)
-rbenv global $(rbenv install -l | grep -v - | tail -1)
+#asdf
+git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.14.0
+. $HOME/.asdf/asdf.sh
+echo "legacy_version_file = yes" >> $HOME/.asdfrc # Reads .ruby-version files as well as .tool-versions
+asdf plugin add ruby
+asdf plugin add python
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+asdf install ruby latest
+asdf install python latest
+asdf install nodejs latest
+
+asdf global ruby latest
+asdf global python latest
+asdf global nodejs latest
+
+npm -g install yarn
+
+gem update --system
+echo 'gem: --no-document' >> $HOME/.gemrc
+
+gem install rails
+gem install foreman
+
+echo '--javascript esbuild' >> $HOME/.railsrc
+echo '-a propshaft' >> $HOME/.railsrc
+echo '-d postgresql' >> $HOME/.railsrc
 
 # Install colorls gem and color theme
 if ! gem list colorls -i --silent; then
