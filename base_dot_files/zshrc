@@ -60,7 +60,7 @@ DEFAULT_USER=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker git git-flow-completion rails ruby heroku gem rvm tmux zsh-syntax-highlighting zsh-autosuggestions sudo autoupdate)
+plugins=(asdf docker git git-flow-completion rails ruby heroku gem tmux zsh-syntax-highlighting zsh-autosuggestions sudo autoupdate)
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
@@ -97,26 +97,11 @@ export LS_COLORS
 
 source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.local/bin:$HOME/.rbenv/shims:$HOME/.cargo/bin:$PATH"
-eval "$($HOME/.rbenv/bin/rbenv init - zsh)"
-
 # Add some culture when opening a new terminal
 # fortune | xargs -0 cowsay | lolcat -a -s 50 -d 1
 
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="$(brew --prefix openssl@1.1)/bin:$PATH"
@@ -126,3 +111,6 @@ export PKG_CONFIG_PATH="$(brew --prefix openssl@1.1)/lib/pkgconfig"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+. $HOME/.asdf/asdf.sh
+export RUBY_YJIT_ENABLE=1
