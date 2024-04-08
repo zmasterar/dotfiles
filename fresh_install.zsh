@@ -16,6 +16,8 @@ sudo apt install -y autoconf build-essential libbz2-dev libdb-dev libffi-dev lib
 sudo chsh -s $(which zsh) $(whoami)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Makes a symbolic link in for every file in base_dot_files directory
 for file in $(find ./base_dot_files -type f -printf "%f\n"); do 
   ln -f -s $HOME/dotfiles/base_dot_files/$file $HOME/.$file
@@ -78,5 +80,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+mkdir $HOME/.fonts
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+mv *.ttf $HOME/.fonts
