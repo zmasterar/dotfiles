@@ -7,8 +7,8 @@ mkdir -p $HOME/.ssh
 chmod  0700 $HOME/.ssh
 # For reference, private keys must have 0600 permissions
 
-sudo apt update && sudo apt install -y zsh curl tmux wireguard jq
-sudo snap install bw
+sudo add-apt-repository -y ppa:mattrose/terminator
+sudo apt update && sudo apt install -y zsh git curl tmux wireguard jq vim terminator
 
 sudo chsh -s $(which zsh) $(whoami)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -42,6 +42,8 @@ fi
 
 mkdir $HOME/.config
 ln -f -s $HOME/dotfiles/other_scripts/dark_colors.yaml $HOME/.config/colorls
+mkdir -p $HOME/.config/terminator
+ln -f -s $HOME/dotfiles/other_scripts/terminator.config $HOME/.config/terminator/config
 
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
