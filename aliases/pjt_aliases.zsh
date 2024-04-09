@@ -24,8 +24,11 @@ alias portal-del-sae-v2='cd ~/pjt/portal-del-sae-v2'
 alias portal-del-sae='cd ~/pjt/portal-del-sae'
 alias rrhh='cd ~/pjt/rrhh'
 alias sistemas-no-jurisdiccionales='cd ~/pjt/sistemas-no-jurisdiccionales'
+alias proyecto-sistemas-judiciales='cd ~/pjt/proyecto-sistemas-judiciales'
+alias puas='cd ~/pjt/proyecto-sistemas-judiciales/sistemas-judiciales-monorepo'
 alias sitio-principal='cd ~/pjt/sitio-principal'
 alias vosk-server='cd ~/pjt/vosk-server'
+
 # e.g. rm -f $HOME/pjt/kubeconfig && ln -s $HOME/pjt/kubeconfig-ws15desa $HOME/pjt/kubeconfig
 export KUBECONFIG=$HOME/pjt/kubeconfig
 alias wakelazarus='ssh raspi400 wakelazarus'
