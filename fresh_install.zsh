@@ -66,7 +66,7 @@ if ! gem list colorls -i --silent; then
 fi
 
 mkdir -p $HOME/.config/colorls
-ln -f -s $HOME/dotfiles/other_scripts/dark_colors.yaml $HOME/.config/colorls
+ln -f -s $HOME/dotfiles/other_scripts/dark_colors.yaml $HOME/.config/colorls/dark_colors.yaml
 mkdir -p $HOME/.config/terminator
 ln -f -s $HOME/dotfiles/other_scripts/terminator.config $HOME/.config/terminator/config
 
