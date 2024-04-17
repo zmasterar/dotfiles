@@ -7,6 +7,8 @@ mkdir -p $HOME/.ssh
 chmod  0700 $HOME/.ssh
 # For reference, private keys must have 0600 permissions
 
+mkdir -p $HOME/.local/bin
+
 sudo add-apt-repository -y ppa:mattrose/terminator
 sudo apt update && sudo apt install -y zsh git curl tmux wireguard jq vim terminator
 
