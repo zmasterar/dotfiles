@@ -37,7 +37,7 @@ done
 #asdf
 git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.14.0
 . $HOME/.asdf/asdf.sh
-echo "legacy_version_file = yes" >> $HOME/.asdfrc # Reads .ruby-version files as well as .tool-versions
+tool-versions
 asdf plugin add ruby
 asdf plugin add python
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -53,14 +53,9 @@ asdf global nodejs latest
 npm -g install yarn
 
 gem update --system
-echo 'gem: --no-document' >> $HOME/.gemrc
 
 gem install rails
 gem install foreman
-
-echo '--javascript esbuild' >> $HOME/.railsrc
-echo '-a propshaft' >> $HOME/.railsrc
-echo '-d postgresql' >> $HOME/.railsrc
 
 # Install colorls gem and color theme
 if ! gem list colorls -i --silent; then
