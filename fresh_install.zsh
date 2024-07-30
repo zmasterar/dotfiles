@@ -12,6 +12,10 @@ mkdir -p $HOME/.local/bin
 sudo add-apt-repository -y ppa:mattrose/terminator
 sudo apt update && sudo apt install -y zsh git curl tmux wireguard jq vim terminator
 
+if [ ! -d $HOME/dotfiles ]; then
+  git clone https://github.com/zmasterar/dotfiles.git $HOME/dotfiles
+fi
+
 #Ruby, Node and Python build dependencies
 sudo apt install -y autoconf build-essential libbz2-dev libdb-dev libffi-dev libgdbm-dev libgdbm6 libgmp-dev liblzma-dev libncurses5-dev libncursesw5-dev libreadline-dev libreadline6-dev libsqlite3-dev libssl-dev libxml2-dev libxmlsec1-dev libyaml-dev patch rustc tk-dev uuid-dev xz-utils zlib1g-dev dirmngr gpg gawk libpq-dev
 
