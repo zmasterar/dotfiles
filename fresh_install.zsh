@@ -38,21 +38,11 @@ for file in $(find ./zsh_custom -maxdepth 1 -type f -printf "%f\n"); do
   ln -f -s $HOME/dotfiles/zsh_custom/$file $ZSH_CUSTOM/$file
 done
 
-#asdf
-git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.14.0
-. $HOME/.asdf/asdf.sh
-tool-versions
-asdf plugin add ruby
-asdf plugin add python
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-
-asdf install ruby latest
-asdf install python latest
-asdf install nodejs latest
-
-asdf global ruby latest
-asdf global python latest
-asdf global nodejs latest
+# mise
+curl https://mise.run | sh
+~/.local/bin/mise activate zsh
+mise install ruby@latest node@latest python@latest
+mise use ruby@latest node@latest python@latest
 
 npm -g install yarn
 

@@ -112,5 +112,5 @@ export PKG_CONFIG_PATH="$(brew --prefix openssl@1.1)/lib/pkgconfig"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-. $HOME/.asdf/asdf.sh
 export RUBY_YJIT_ENABLE=1
+eval "$(/home/blavena/.local/bin/mise activate zsh)"
