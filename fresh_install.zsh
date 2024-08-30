@@ -23,6 +23,7 @@ sudo chsh -s $(which zsh) $(whoami)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install kubecolor
 
 # Makes a symbolic link in for every file in base_dot_files directory
