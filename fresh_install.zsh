@@ -41,7 +41,7 @@ done
 
 # mise
 curl https://mise.run | sh
-~/.local/bin/mise activate zsh
+eval "$(~/.local/bin/mise activate zsh)"
 mise install ruby@latest node@latest python@latest
 mise use ruby@latest node@latest python@latest
 
