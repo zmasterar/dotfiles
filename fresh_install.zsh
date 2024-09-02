@@ -47,18 +47,18 @@ brew install kubecolor
 curl https://mise.run | sh
 eval "$(~/.local/bin/mise activate zsh)"
 mise install ruby@latest node@latest python@latest
-mise use ruby@latest node@latest python@latest
+mise use --global ruby@latest node@latest python@latest
 
-npm -g install yarn
+mise exec -- npm -g install yarn
 
-gem update --system
+mise exec -- gem update --system
 
-gem install rails
-gem install foreman
+mise exec -- gem install rails
+mise exec -- gem install foreman
 
 # Install colorls gem and color theme
-if ! gem list colorls -i --silent; then
-  gem install colorls -N
+if ! mise exec -- gem list colorls -i --silent; then
+  mise exec -- gem install colorls -N
 fi
 
 mkdir -p $HOME/.config/colorls
