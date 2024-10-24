@@ -24,18 +24,21 @@ setk () {
   rm -f $HOME/pjt/kubeconfig && cp $HOME/pjt/kubeconfigs/$1 $HOME/pjt/kubeconfig
 
   echo "Kubeconfig set"
-  echo "file:    $HOME/pjt/kubeconfigs/$1"
-  echo "Server:  $(yq '.clusters[0].name' $HOME/pjt/kubeconfigs/$1)"
-  echo "Address: $(yq '.clusters[0].cluster.server' $HOME/pjt/kubeconfigs/$1)"
+  echo "file:    $HOME/pjt/kubeconfigs/$1\n"
+  print_kubeconfig
 }
 
 getk () {
   if [ -f $KUBECONFIG ]; then
-    echo "kubeconfig is in $KUBECONFIG:\n"
-    cat $KUBECONFIG
+    echo "kubeconfig is in $KUBECONFIG\n"
+    print_kubeconfig
     return 0
   else
     echo "No kubeconfig file found in $KUBECONFIG"
     return 1
   fi
+}
+
+print_kubeconfig () {
+  cat $KUBECONFIG | yq '.clusters[].cluster."certificate-authority-data" = "..." | .users[].user."client-certificate-data" = "..." | .users[].user."client-key-data" = "..."'
 }
