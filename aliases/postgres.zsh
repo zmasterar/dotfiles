@@ -1,1 +1,1 @@
-alias psql='docker exec -it postgres psql -U postgres'
+#alias psql='docker run --rm postgres:alpine psql'
