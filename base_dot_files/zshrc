@@ -116,3 +116,5 @@ export RUBY_YJIT_ENABLE=1
 eval "$(/home/blavena/.local/bin/mise activate zsh)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+setopt completealiases
