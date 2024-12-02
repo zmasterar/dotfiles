@@ -58,7 +58,7 @@ GRANT CONNECT ON DATABASE example TO zbx_monitor;"
 
   dump_database () {
     echo '### Dump database'
-    echo 'pg_dump --format=custom --no-acl --no-owner --no-privileges --file=database_name-$(date +%Y%m%d).dump database_name'
+    echo 'export database_name=demo; pg_dump --format=custom --no-acl --no-owner --no-privileges --file=$database_name-$(date +%Y%m%d).dump $database_name'
     echo
   }
 
